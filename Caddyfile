@@ -1,0 +1,4 @@
+kstmit.kz {
+    root * /usr/share/caddy
+    file_server
+}
