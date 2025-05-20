@@ -2,92 +2,271 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Резюме - Ережепов Рамазан</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Стили для переключателя языков */
+        .language-switcher {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .language-switcher button {
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .language-switcher button:hover {
+            background-color: #0b5ed7;
+        }
+        .language-switcher button.active {
+            background-color: #0b5ed7;
+            font-weight: bold;
+        }
+        .lang-en, .lang-ru {
+            display: none; /* Скрываем обе секции по умолчанию */
+        }
+        .lang-en.active, .lang-ru.active {
+            display: block; /* Показываем активную секцию */
+        }
+        /* Общие стили для контента, чтобы избежать дублирования из styles.css */
+        .content-section h2 {
+            color: #2c3e50;
+        }
+        .content-section h3 {
+            color: #34495e;
+            margin-top: 15px;
+        }
+        .content-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .content-section ul li::before {
+            content: "✔ ";
+            color: #0d6efd;
+        }
+        .content-section hr {
+            border: 0;
+            height: 1px;
+            background: #ccc;
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Ramazan Yerezhepov</h1>
         <p>DevOps / System Administrator</p>
     </header>
-<div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
 
-    <section class="about">
-        <h2 style="color: #2c3e50;">Sociable, easily integrates into teams. Proactive. Non-smoker. Married.</h2>
-        <p>
-            <strong>Experienced IT Professional</strong> with 9 years of expertise in system administration, digital solution
-            implementation, and IT infrastructure management across diverse sectors, including healthcare and corporate
-            environments. Proven track record of successfully deploying complex systems, optimizing networks, and achieving
-            high digitalization performance.
-        </p>
+    <div class="language-switcher">
+        <button id="btn-ru" class="active">Русский</button>
+        <button id="btn-en">English</button>
+    </div>
 
-        <h3 style="color: #34495e;">Key Highlights:</h3>
-        <ul>
-            <li><strong>System Administration:</strong> In-depth knowledge and hands-on experience in configuring and
-                maintaining local area networks (LAN, Wi-Fi, radio bridges, 5G), servers (Windows Server 2003-2022), mail
-                systems (MS Exchange 2007-2019), and access control and management systems (ACMS/SCADA).</li>
-            <li><strong>Digital Transformation & Implementation:</strong> Led digitalization projects in regional medical
-                institutions, achieving significant success and national recognition (2nd place by KPI among regions of the
-                Republic of Kazakhstan). Pioneered the implementation of medical information systems in the region.</li>
-            <li><strong>Project Management:</strong> Effectively managed implementation teams, ensuring on-time task
-                completion and achievement of set goals.</li>
-            <li><strong>Technical Support:</strong> Experienced in HelpDesk operations, ensuring uninterrupted IT services
-                and user equipment functionality.</li>
-        </ul>
+    <div class="container">
+        <div id="english-content" class="lang-en active">
+            <section class="about content-section">
+                <h2 style="color: #2c3e50;">Sociable, easily integrates into teams. Proactive. Non-smoker. Married.</h2>
+                <p>
+                    <strong>Experienced IT Professional</strong> with 9 years of expertise in system administration, digital solution
+                    implementation, and IT infrastructure management across diverse sectors, including healthcare and corporate
+                    environments. Proven track record of successfully deploying complex systems, optimizing networks, and achieving
+                    high digitalization performance.
+                </p>
 
-        <hr style="border: 0; height: 1px; background: #ccc; margin: 20px 0;">
+                <h3 style="color: #34495e;">Key Highlights:</h3>
+                <ul>
+                    <li><strong>System Administration:</strong> In-depth knowledge and hands-on experience in configuring and
+                        maintaining local area networks (LAN, Wi-Fi, radio bridges, 5G), servers (Windows Server 2003-2022), mail
+                        systems (MS Exchange 2007-2019), and access control and management systems (ACMS/SCADA).</li>
+                    <li><strong>Digital Transformation & Implementation:</strong> Led digitalization projects in regional medical
+                        institutions, achieving significant success and national recognition (2nd place by KPI among regions of the
+                        Republic of Kazakhstan). Pioneered the implementation of medical information systems in the region.</li>
+                    <li><strong>Project Management:</strong> Effectively managed implementation teams, ensuring on-time task
+                        completion and achievement of set goals.</li>
+                    <li><strong>Technical Support:</strong> Experienced in HelpDesk operations, ensuring uninterrupted IT services
+                        and user equipment functionality.</li>
+                </ul>
 
-        <h2 style="color: #2c3e50;">Interests & Goals</h2>
-        <p>
-            <strong>Interests:</strong> Deeply interested in <strong>modern IT technologies</strong>, especially in network
-            infrastructure, cybersecurity, cloud solutions, and artificial intelligence. Committed to continuous learning
-            and applying innovative approaches to solve complex business challenges.
-        </p>
-        <p>
-            <strong>Goals:</strong> Seeking an opportunity to leverage my extensive experience and knowledge in a dynamic
-            company where I can <strong>contribute to digital development</strong>, optimize IT processes, and build
-            reliable, high-performance infrastructure. Focused on achieving tangible results, implementing best practices,
-            and fostering professional growth.
-        </p>
+                <hr>
 
-        <hr style="border: 0; height: 1px; background: #ccc; margin: 20px 0;">
+                <h2 style="color: #2c3e50;">Interests & Goals</h2>
+                <p>
+                    <strong>Interests:</strong> Deeply interested in <strong>modern IT technologies</strong>, especially in network
+                    infrastructure, cybersecurity, cloud solutions, and artificial intelligence. Committed to continuous learning
+                    and applying innovative approaches to solve complex business challenges.
+                </p>
+                <p>
+                    <strong>Goals:</strong> Seeking an opportunity to leverage my extensive experience and knowledge in a dynamic
+                    company where I can <strong>contribute to digital development</strong>, optimize IT processes, and build
+                    reliable, high-performance infrastructure. Focused on achieving tangible results, implementing best practices,
+                    and fostering professional growth.
+                </p>
 
-        <h2 style="color: #2c3e50;">Additional Skills</h2>
-        <ul>
-            <li><strong>English Language:</strong> A2</li>
-            <li><strong>GIS:</strong> Foundational knowledge of Geographic Information Systems</li>
-            <li><strong>Driving License:</strong> Categories B, C</li>
-        </ul>
+                <hr>
 
-        <hr style="border: 0; height: 1px; background: #ccc; margin: 20px 0;">
+                <h2 style="color: #2c3e50;">Additional Skills</h2>
+                <ul>
+                    <li><strong>English Language:</strong> A2</li>
+                    <li><strong>GIS:</strong> Foundational knowledge of Geographic Information Systems</li>
+                    <li><strong>Driving License:</strong> Categories B, C</li>
+                </ul>
 
-        <h2 style="color: #2c3e50;">References</h2>
-        <ul>
-            <li><strong>Aslan Zhanyzbayev</strong>, Akim (Mayor) of Zhetikara city</li>
-            <li><strong>Vyacheslav Dudnik</strong>, Former Vice-Minister of Healthcare</li>
-            <li><strong>Sandybekov Bagitbek Nazarbekovich</strong>, Advisor to the Chairman of the Management Board, JSC "SEC
-                "Tobol"</li>
-        </ul>
-    </section>
+                <hr>
 
-</div>
-    <section class="skills">
-        <h2>Навыки</h2>
-        <ul>
-            <li>Docker / Kubernetes</li>
-            <li>Linux / Bash</li>
-            <li>CI/CD</li>
-            <li>NGINX / Apache</li>
-            <li>Python Basics</li>
-        </ul>
-    </section>
-    <section class="contacts">
-        <h2>Контакты</h2>
-        <p>Email: ramazan-erezhepov@kstmit.kz</p>
-        <p>Telegram: @ramazilnik</p>
-    </section>
+                <h2 style="color: #2c3e50;">References</h2>
+                <ul>
+                    <li><strong>Aslan Zhanyzbayev</strong>, Akim (Mayor) of Zhetikara city</li>
+                    <li><strong>Vyacheslav Dudnik</strong>, Former Vice-Minister of Healthcare</li>
+                    <li><strong>Sandybekov Bagitbek Nazarbekovich</strong>, Advisor to the Chairman of the Management Board, JSC "SEC
+                        "Tobol"</li>
+                </ul>
+            </section>
+
+            <section class="skills content-section">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Docker / Kubernetes</li>
+                    <li>Linux / Bash</li>
+                    <li>CI/CD</li>
+                    <li>NGINX / Apache</li>
+                    <li>Python Basics</li>
+                </ul>
+            </section>
+            <section class="contacts content-section">
+                <h2>Contacts</h2>
+                <p>Email: ramazan-erezhepov@kstmit.kz</p>
+                <p>Telegram: @ramazilnik</p>
+            </section>
+        </div>
+
+        <div id="russian-content" class="lang-ru">
+            <section class="about content-section">
+                <h2 style="color: #2c3e50;">Коммуникабельный, легко вливаюсь в коллектив. Инициативный. Не курящий. Женат.</h2>
+                <p>
+                    <strong>Опытный IT-специалист с 9-летним стажем</strong> в системном администрировании, внедрении цифровых решений и
+                    управлении IT-инфраструктурой в различных секторах, включая здравоохранение и корпоративную сферу. Обладаю
+                    проверенным опытом успешного внедрения сложных систем, оптимизации сетей и достижения высоких показателей
+                    цифровизации.
+                </p>
+
+                <h3 style="color: #34495e;">Основные моменты:</h3>
+                <ul>
+                    <li><strong>Системное администрирование:</strong> Глубокие знания и практический опыт в настройке и
+                        обслуживании локальных сетей (LAN, Wi-Fi, радиомосты, 5G), серверов (Windows Server 2003-2022), почтовых
+                        систем (MS Exchange 2007-2019), а также систем мониторинга и контроля доступа (СКУД).</li>
+                    <li><strong>Цифровая трансформация и внедрение:</strong> Лидировал проекты по цифровизации медицинских
+                        учреждений области, добившись значимых успехов и признания на республиканском уровне (2-е место по KPI).
+                        Пионер во внедрении медицинских информационных систем в регионе.</li>
+                    <li><strong>Управление проектами:</strong> Эффективно руководил группами внедрения, обеспечивая выполнение
+                        задач в срок и достижение поставленных целей.</li>
+                    <li><strong>Техническая поддержка:</strong> Опыт работы с HelpDesk, обеспечивая бесперебойную работу
+                        IT-сервисов и пользовательского оборудования.</li>
+                </ul>
+
+                <hr>
+
+                <h2 style="color: #2c3e50;">Интересы и цели</h2>
+                <p>
+                    <strong>Интересы:</strong> Глубоко заинтересован в <strong>современных IT-технологиях</strong>, особенно в области
+                    сетевой инфраструктуры, кибербезопасности, облачных решений и искусственного интеллекта. Стремлюсь к
+                    постоянному обучению и применению инновационных подходов для решения комплексных бизнес-задач.
+                </p>
+                <p>
+                    <strong>Цели:</strong> Ищу возможность применить свой обширный опыт и знания в динамичной компании, где
+                    смогу <strong>способствовать цифровому развитию</strong>, оптимизации IT-процессов и построению надежной,
+                    высокопроизводительной инфраструктуры. Ориентирован на достижение конкретных результатов, внедрение
+                    передовых практик и рост в профессиональной сфере.
+                </p>
+
+                <hr>
+
+                <h2 style="color: #2c3e50;">Дополнительные навыки</h2>
+                <ul>
+                    <li><strong>Английский язык:</strong> А2</li>
+                    <li><strong>GIS:</strong> Знание основ геоинформационных систем</li>
+                    <li><strong>Водительское удостоверение:</strong> Категории B, C</li>
+                </ul>
+
+                <hr>
+
+                <h2 style="color: #2c3e50;">Рекомендации</h2>
+                <ul>
+                    <li><strong>Аслан Жаныспаев</strong>, Аким города Житикары</li>
+                    <li><strong>Вячеслав Дудник</strong>, экс-вице-министр здравоохранения</li>
+                    <li><strong>Сандыбеков Багитбек Назарбекович</strong>, Советник председателя правления АО "СПК "Тобол"</li>
+                </ul>
+            </section>
+
+            <section class="skills content-section">
+                <h2>Навыки</h2>
+                <ul>
+                    <li>Docker / Kubernetes</li>
+                    <li>Linux / Bash</li>
+                    <li>CI/CD</li>
+                    <li>NGINX / Apache</li>
+                    <li>Python Basics</li>
+                </ul>
+            </section>
+            <section class="contacts content-section">
+                <h2>Контакты</h2>
+                <p>Email: ramazan-erezhepov@kstmit.kz</p>
+                <p>Telegram: @ramazilnik</p>
+            </section>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2025 DevOps, System Administrator</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btnRu = document.getElementById('btn-ru');
+            const btnEn = document.getElementById('btn-en');
+            const contentRu = document.getElementById('russian-content');
+            const contentEn = document.getElementById('english-content');
+
+            function showLanguage(lang) {
+                if (lang === 'ru') {
+                    contentRu.classList.add('active');
+                    contentEn.classList.remove('active');
+                    btnRu.classList.add('active');
+                    btnEn.classList.remove('active');
+                    document.documentElement.lang = 'ru'; // Устанавливаем язык HTML
+                    document.title = 'Резюме - Ережепов Рамазан'; // Обновляем заголовок страницы
+                } else {
+                    contentEn.classList.add('active');
+                    contentRu.classList.remove('active');
+                    btnEn.classList.add('active');
+                    btnRu.classList.remove('active');
+                    document.documentElement.lang = 'en'; // Устанавливаем язык HTML
+                    document.title = 'Resume - Ramazan Yerezhepov'; // Обновляем заголовок страницы
+                }
+            }
+
+            // Устанавливаем начальный язык на русский
+            showLanguage('ru');
+
+            btnRu.addEventListener('click', function() {
+                showLanguage('ru');
+            });
+
+            btnEn.addEventListener('click', function() {
+                showLanguage('en');
+            });
+        });
+    </script>
 </body>
 </html>
