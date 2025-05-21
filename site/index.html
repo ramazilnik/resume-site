@@ -3,269 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сайт Резюме - Ережепов Рамазан DevOps</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Стили для переключателя языков */
-        .language-switcher {
-            text-align: center;
-            margin-bottom: 20px;
-            padding: 10px;
-            background-color: #e0e0e0;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .language-switcher button {
-            background-color: #0d6efd;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            margin: 0 5px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s ease;
-        }
-        .language-switcher button:hover {
-            background-color: #0b5ed7;
-        }
-        .language-switcher button.active {
-            background-color: #0b5ed7;
-            font-weight: bold;
-        }
-        .lang-en, .lang-ru {
-            display: none; /* Скрываем обе секции по умолчанию */
-        }
-        .lang-en.active, .lang-ru.active {
-            display: block; /* Показываем активную секцию */
-        }
-        /* Общие стили для контента, чтобы избежать дублирования из styles.css */
-        .content-section h2 {
-            color: #2c3e50;
-        }
-        .content-section h3 {
-            color: #34495e;
-            margin-top: 15px;
-        }
-        .content-section ul {
-            list-style: none;
-            padding: 0;
-        }
-        .content-section ul li::before {
-            content: "✔ ";
-            color: #0d6efd;
-        }
-        .content-section hr {
-            border: 0;
-            height: 1px;
-            background: #ccc;
-            margin: 20px 0;
-        }
-    </style>
+    <title>Резюме / Resume - Ережепов Рамазан</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Ramazan Yerezhepov</h1>
-        <p>DevOps / System Administrator</p>
-    </header>
-
-    <div class="language-switcher">
-        <button id="btn-ru" class="active">Русский</button>
-        <button id="btn-en">English</button>
+    <div class="lang-switch">
+        <button id="lang-ru" onclick="switchLang('ru')">RU</button>
+        <button id="lang-en" onclick="switchLang('en')">EN</button>
     </div>
 
-    <div class="container">
-        <div id="english-content" class="lang-en active">
-            <section class="about content-section">
-                <h2 style="color: #2c3e50;">Sociable, easily integrates into teams. Proactive. Non-smoker. Married.</h2>
-                <p>
-                    <strong>Experienced IT Professional</strong> with 9 years of expertise in system administration, digital solution
-                    implementation, and IT infrastructure management across diverse sectors, including healthcare and corporate
-                    environments. Proven track record of successfully deploying complex systems, optimizing networks, and achieving
-                    high digitalization performance.
-                </p>
+    <main class="container">
+        <section class="profile-header">
+            <img src="https://via.placeholder.com/150" alt="Ramazan photo" class="profile-pic"> <h1 class="lang ru">Ережепов Рамазан Маратович</h1>
+            <h1 class="lang en">Erezhepov Ramazan Maratovich</h1>
+            <p class="role lang ru">Системный администратор / DevOps-инженер</p>
+            <p class="role lang en">System Administrator / DevOps Engineer</p>
+        </section>
 
-                <h3 style="color: #34495e;">Key Highlights:</h3>
+        <section class="contact-info">
+            <h2 class="lang ru">Контакты</h2>
+            <h2 class="lang en">Contacts</h2>
+            <ul>
+                <li><i class="icon-phone">📞</i> +7 (701) 190-3509</li>
+                <li><i class="icon-mail">📧</i> ramazan-erezhepov@kstmit.kz</li>
+                <li><i class="icon-skype">💬</i> Skype: rama_kst_</li>
+                <li class="lang ru"><i class="icon-home">🏠</i> Костанай</li>
+                <li class="lang en"><i class="icon-home">🏠</i> Kostanay, Kazakhstan</li>
+            </ul>
+        </section>
+
+        <section class="about-me">
+            <h2 class="lang ru">Обо мне</h2>
+            <h2 class="lang en">About Me</h2>
+            <p class="lang ru">Коммуникабельный, инициативный, легко встраиваюсь в коллектив. Женат, двое детей. Не курю.</p>
+            <p class="lang en">Sociable, proactive, easily integrates into teams. Married, two children. Non-smoker.</p>
+        </section>
+
+        <section class="skills">
+            <h2 class="lang ru">Навыки</h2>
+            <h2 class="lang en">Skills</h2>
+            <div class="skills-grid">
+                <div><strong>Операционные системы / OS:</strong></div>
+                <div>Linux, Windows Server (2003-2022)</div>
+                <div><strong>Виртуализация / Virtualization:</strong></div>
+                <div>VMware, Veeam Backup</div>
+                <div><strong>DevOps / CI/CD:</strong></div>
+                <div>CI/CD, Git, GitHub, Docker, Kubernetes</div>
+                <div><strong>Базы данных / Databases:</strong></div>
+                <div>MS SQL</div>
+                <div><strong>Почта / Mail Systems:</strong></div>
+                <div>MS Exchange Server</div>
+                <div><strong>Сеть / Networking:</strong></div>
+                <div>LAN, Mikrotik, CheckPoint, VPN, DHCP, DNS</div>
+                <div><strong>Управление идентификацией / ID Management:</strong></div>
+                <div>Active Directory</div>
+                <div><strong>Языки программирования / Programming:</strong></div>
+                <div>Python Basics, Bash scripting</div>
+            </div>
+        </section>
+
+        <section class="work-experience">
+            <h2 class="lang ru">Опыт работы</h2>
+            <h2 class="lang en">Work Experience</h2>
+
+            <div class="job-entry">
+                <h3>KIA Qazaqstan</h3>
+                <p class="job-meta lang ru">Системный администратор, Сентябрь 2024 — настоящее время</p>
+                <p class="job-meta lang en">System Administrator, Sep 2024 — Present</p>
                 <ul>
-                    <li><strong>System Administration:</strong> In-depth knowledge and hands-on experience in configuring and
-                        maintaining local area networks (LAN, Wi-Fi, radio bridges, 5G), servers (Windows Server 2003-2022), mail
-                        systems (MS Exchange 2007-2019), and access control and management systems (ACMS/SCADA).</li>
-                    <li><strong>Digital Transformation & Implementation:</strong> Led digitalization projects in regional medical
-                        institutions, achieving significant success and national recognition (2nd place by KPI among regions of the
-                        Republic of Kazakhstan). Pioneered the implementation of medical information systems in the region.</li>
-                    <li><strong>Project Management:</strong> Effectively managed implementation teams, ensuring on-time task
-                        completion and achievement of set goals.</li>
-                    <li><strong>Technical Support:</strong> Experienced in HelpDesk operations, ensuring uninterrupted IT services
-                        and user equipment functionality.</li>
+                    <li class="lang ru">Оказание первой и второй линии технической поддержки (HelpDesk).</li>
+                    <li class="lang en">Provided first and second-line technical support (HelpDesk).</li>
+                    <li class="lang ru">Управление закупками IT-оборудования и расходных материалов.</li>
+                    <li class="lang en">Managed IT equipment and consumables procurement.</li>
+                    <li class="lang ru">Настройка и обслуживание локальной сети (LAN/WiFi), радиомостов и 5G-оборудования.</li>
+                    <li class="lang en">Configured and maintained LAN/WiFi networks, radio bridges, and 5G equipment.</li>
+                    <li class="lang ru">Автоматизация резервного копирования данных (1C).</li>
+                    <li class="lang en">Automated 1C data backup processes.</li>
+                    <li class="lang ru">Обслуживание и конфигурация сетевого оборудования Mikrotik.</li>
+                    <li class="lang en">Maintained and configured Mikrotik network equipment.</li>
                 </ul>
+            </div>
 
-                <hr>
-
-                <h2 style="color: #2c3e50;">Interests & Goals</h2>
-                <p>
-                    <strong>Interests:</strong> Deeply interested in <strong>modern IT technologies</strong>, especially in network
-                    infrastructure, cybersecurity, cloud solutions, and artificial intelligence. Committed to continuous learning
-                    and applying innovative approaches to solve complex business challenges.
-                </p>
-                <p>
-                    <strong>Goals:</strong> Seeking an opportunity to leverage my extensive experience and knowledge in a dynamic
-                    company where I can <strong>contribute to digital development</strong>, optimize IT processes, and build
-                    reliable, high-performance infrastructure. Focused on achieving tangible results, implementing best practices,
-                    and fostering professional growth.
-                </p>
-
-                <hr>
-
-                <h2 style="color: #2c3e50;">Additional Skills</h2>
+            <div class="job-entry">
+                <h3>АО СПК ТОБОЛ</h3>
+                <p class="job-meta lang ru">Системный администратор, Ноябрь 2022 — Август 2024</p>
+                <p class="job-meta lang en">System Administrator, Nov 2022 — Aug 2024</p>
                 <ul>
-                    <li><strong>English Language:</strong> A2</li>
-                    <li><strong>GIS:</strong> Foundational knowledge of Geographic Information Systems</li>
-                    <li><strong>Driving License:</strong> Categories B, C</li>
+                    <li class="lang ru">Обновление серверного оборудования с миграцией от Windows Server 2003 до Windows Server 2022.</li>
+                    <li class="lang en">Upgraded server infrastructure, migrating from Windows Server 2003 to Windows Server 2022.</li>
+                    <li class="lang ru">Миграция MS Exchange с версии 2007 до 2019 года.</li>
+                    <li class="lang en">Migrated MS Exchange from version 2007 to 2019.</li>
+                    <li class="lang ru">Развертывание и обслуживание CheckPoint, VPN и других систем безопасности.</li>
+                    <li class="lang en">Deployed and maintained CheckPoint, VPN, and other security systems.</li>
+                    <li class="lang ru">Внедрение и обслуживание виртуализации на VMware.</li>
+                    <li class="lang en">Implemented and maintained virtualization using VMware.</li>
+                    <li class="lang ru">Настройка и поддержка системы резервного копирования Veeam Backup.</li>
+                    <li class="lang en">Configured and supported Veeam Backup system.</li>
                 </ul>
+            </div>
 
-                <hr>
-
-                <h2 style="color: #2c3e50;">References</h2>
+            <div class="job-entry">
+                <h3>ГУ "Управление здравоохранения Костанайской области"</h3>
+                <p class="job-meta lang ru">Руководитель ИТ-проектов / Руководитель группы внедрения цифровизации, Ноябрь 2018 — Декабрь 2022</p>
+                <p class="job-meta lang en">IT Project Manager / Head of Digitalization Implementation Group, Nov 2018 — Dec 2022</p>
                 <ul>
-                    <li><strong>Aslan Zhanyzbayev</strong>, Akim (Mayor) of Zhetikara city</li>
-                    <li><strong>Vyacheslav Dudnik</strong>, Former Vice-Minister of Healthcare</li>
-                    <li><strong>Sandybekov Bagitbek Nazarbekovich</strong>, Advisor to the Chairman of the Management Board, JSC "SEC
-                        "Tobol"</li>
+                    <li class="lang ru">Руководил внедрением цифровизации и медицинской информационной системы (МИС) "Damumed" во всех медицинских учреждениях Костанайской области (150+ учреждений).</li>
+                    <li class="lang en">Led the digitalization and Medical Information System (MIS) "Damumed" implementation across all medical institutions in Kostanay Region (150+ facilities).</li>
+                    <li class="lang ru">Достиг KPI по цифровизации (95%), обеспечив 2-е место среди регионов Республики Казахстан.</li>
+                    <li class="lang en">Achieved 95% digitalization KPI, securing 2nd place among regions in the Republic of Kazakhstan.</li>
+                    <li class="lang ru">Координация и обучение персонала по использованию новых ИТ-систем.</li>
+                    <li class="lang en">Coordinated and trained staff on the use of new IT systems.</li>
+                    <li class="lang ru">Взаимодействие с внешними подрядчиками и государственными органами.</li>
+                    <li class="lang en">Liaised with external contractors and government bodies.</li>
                 </ul>
-            </section>
+            </div>
 
-            <section class="skills content-section">
-                <h2>Skills</h2>
+            <div class="job-entry">
+                <h3>Поликлиника №3 города Костанай</h3>
+                <p class="job-meta lang ru">Системный администратор, 2015 — 2018</p>
+                <p class="job-meta lang en">System Administrator, 2015 — 2018</p>
                 <ul>
-                    <li>Docker / Kubernetes</li>
-                    <li>Linux / Bash</li>
-                    <li>CI/CD</li>
-                    <li>NGINX / Apache</li>
-                    <li>Python Basics</li>
+                    <li class="lang ru">Администрирование ИТ-инфраструктуры поликлиники (150 ПК, 300 сотрудников).</li>
+                    <li class="lang en">Administered IT infrastructure for the polyclinic (150 PCs, 300 employees).</li>
+                    <li class="lang ru">Первым внедрил медицинскую информационную систему в области.</li>
+                    <li class="lang en">Pioneered the implementation of a medical information system in the region.</li>
+                    <li class="lang ru">Обеспечение бесперебойной работы компьютерного оборудования и сетевых сервисов.</li>
+                    <li class="lang en">Ensured uninterrupted operation of computer equipment and network services.</li>
+                    <li class="lang ru">Техническая поддержка пользователей и устранение неисправностей.</li>
+                    <li class="lang en">Provided technical support to users and troubleshooting.</li>
                 </ul>
-            </section>
-            <section class="contacts content-section">
-                <h2>Contacts</h2>
-                <p>Email: ramazan-erezhepov@kstmit.kz</p>
-                <p>Telegram: @ramazilnik</p>
-            </section>
-        </div>
+            </div>
+        </section>
 
-        <div id="russian-content" class="lang-ru">
-            <section class="about content-section">
-                <h2 style="color: #2c3e50;">О себе.</h2>
-                <p>
-                    <strong>Опытный IT-специалист более чем с 9-летним стажем</strong> в системном администрировании, внедрении цифровых решений и
-                    управлении IT-инфраструктурой в различных секторах, включая здравоохранение и корпоративную сферу. Обладаю
-                    проверенным опытом успешного внедрения сложных систем, оптимизации сетей и достижения высоких показателей
-                    цифровизации.
-                </p>
+        <section class="education">
+            <h2 class="lang ru">Образование</h2>
+            <h2 class="lang en">Education</h2>
+            <div class="edu-entry">
+                <h3>КГУ Им. Ахмета Байтурсынова</h3>
+                <p class="edu-meta lang ru">Вычислительная техника и программное обеспечение, 2015</p>
+                <p class="edu-meta lang en">Baitursynov University, Computer Engineering and Software, 2015</p>
+            </div>
+        </section>
 
-                <h3 style="color: #34495e;">Основные моменты:</h3>
-                <ul>
-                    <li><strong>Системное администрирование:</strong> Глубокие знания и практический опыт в настройке и
-                        обслуживании локальных сетей (LAN, Wi-Fi, радиомосты, 5G), серверов (Windows Server 2003-2022), почтовых
-                        систем (MS Exchange 2007-2019), а также систем мониторинга и контроля доступа (СКУД).</li>
-                    <li><strong>Цифровая трансформация и внедрение:</strong> Лидировал проекты по цифровизации медицинских
-                        учреждений области, добившись значимых успехов и признания на республиканском уровне (2-е место по KPI).
-                        Пионер во внедрении медицинских информационных систем в регионе.</li>
-                    <li><strong>Управление проектами:</strong> Эффективно руководил группами внедрения, обеспечивая выполнение
-                        задач в срок и достижение поставленных целей.</li>
-                    <li><strong>Техническая поддержка:</strong> Опыт работы с HelpDesk, обеспечивая бесперебойную работу
-                        IT-сервисов и пользовательского оборудования.</li>
-                </ul>
+        <section class="certifications">
+            <h2 class="lang ru">Курсы и сертификаты</h2>
+            <h2 class="lang en">Courses & Certifications</h2>
+            <ul>
+                <li class="lang ru">DevOps (GeekBrains, 2023): Linux, Docker, Контейнеризация, Git</li>
+                <li class="lang en">DevOps (GeekBrains, 2023): Linux, Docker, Containerization, Git</li>
+            </ul>
+        </section>
 
-                <hr>
+        <section class="languages">
+            <h2 class="lang ru">Языки</h2>
+            <h2 class="lang en">Languages</h2>
+            <ul>
+                <li>Қазақ тілі — <span class="lang ru">родной</span> / <span class="lang en">native</span></li>
+                <li>Русский — <span class="lang ru">свободно</span> / <span class="lang en">fluent</span></li>
+                <li>Английский — <span class="lang ru">начальный (A1)</span> / <span class="lang en">beginner (A1)</span></li>
+            </ul>
+        </section>
 
-                <h2 style="color: #2c3e50;">Интересы и цели</h2>
-                <p>
-                    <strong>Интересы:</strong> Глубоко заинтересован в <strong>современных IT-технологиях</strong>, особенно в области
-                    сетевой инфраструктуры, кибербезопасности, облачных решений и искусственного интеллекта. Стремлюсь к
-                    постоянному обучению и применению инновационных подходов для решения комплексных бизнес-задач.
-                </p>
-                <p>
-                    <strong>Цели:</strong> Ищу возможность применить свой обширный опыт и знания в динамичной компании, где
-                    смогу <strong>способствовать цифровому развитию</strong>, оптимизации IT-процессов и построению надежной,
-                    высокопроизводительной инфраструктуры. Ориентирован на достижение конкретных результатов, внедрение
-                    передовых практик и рост в профессиональной сфере.
-                </p>
-                <h3 style="color: #2c3e50;">Коммуникабельный, легко вливаюсь в коллектив. Инициативный. Не курю. Женат. Двое детей.</h2>
-                <hr>
+        <section class="additional-info">
+            <h2 class="lang ru">Дополнительная информация</h2>
+            <h2 class="lang en">Additional Information</h2>
+            <ul>
+                <li class="lang ru"><strong>Водительское удостоверение:</strong> Категории B, C</li>
+                <li class="lang en"><strong>Driving License:</strong> Categories B, C</li>
+                <li class="lang ru">Знание основ геоинформационных систем (GIS).</li>
+                <li class="lang en">Foundational knowledge of Geographic Information Systems (GIS).</li>
+            </ul>
+        </section>
 
-                <h2 style="color: #2c3e50;">Дополнительные навыки</h2>
-                <ul>
-                    <li><strong>Английский язык:</strong> А2</li>
-                    <li><strong>GIS:</strong> Знание основ геоинформационных систем</li>
-                    <li><strong>Водительское удостоверение:</strong> Категории B, C</li>
-                </ul>
-
-                <hr>
-
-                <h2 style="color: #2c3e50;">Рекомендации</h2>
-                <ul>
-                    <li><strong>Аслан Жаныспаев</strong>, Аким города Житикары</li>
-                    <li><strong>Вячеслав Дудник</strong>, экс-вице-министр здравоохранения</li>
-                    <li><strong>Сандыбеков Багитбек Назарбекович</strong>, Советник председателя правления АО "СПК "Тобол"</li>
-                </ul>
-            </section>
-
-            <section class="skills content-section">
-                <h2>Навыки</h2>
-                <ul>
-                    <li>Docker / Kubernetes</li>
-                    <li>Linux / Bash</li>
-                    <li>CI/CD</li>
-                    <li>NGINX / Apache</li>
-                    <li>Python Basics</li>
-                </ul>
-            </section>
-            <section class="contacts content-section">
-                <h2>Контакты</h2>
-                <p>Email: ramazan-erezhepov@kstmit.kz</p>
-                <p>Telegram: @ramazilnik</p>
-            </section>
-        </div>
-    </div>
+        <section class="references">
+            <h2 class="lang ru">Рекомендации</h2>
+            <h2 class="lang en">References</h2>
+            <ul>
+                <li><strong>Аслан Жаныспаев</strong>, <span class="lang ru">Аким города Житикары</span> / <span class="lang en">Akim (Mayor) of Zhetikara city</span></li>
+                <li><strong>Вячеслав Дудник</strong>, <span class="lang ru">экс-вице-министр здравоохранения</span> / <span class="lang en">Former Vice-Minister of Healthcare</span></li>
+                <li><strong>Сандыбеков Багитбек Назарбекович</strong>, <span class="lang ru">Советник председателя правления АО "СПК "Тобол"</span> / <span class="lang en">Advisor to the Chairman of the Management Board, JSC "SEC "Tobol"</span></li>
+            </ul>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2025 DevOps, System Administrator</p>
+        <p class="lang ru">&copy; 2025 Ережепов Рамазан. Все права защищены.</p>
+        <p class="lang en">&copy; 2025 Ramazan Yerezhepov. All rights reserved.</p>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const btnRu = document.getElementById('btn-ru');
-            const btnEn = document.getElementById('btn-en');
-            const contentRu = document.getElementById('russian-content');
-            const contentEn = document.getElementById('english-content');
+        // Function to switch language
+        function switchLang(lang) {
+            document.querySelectorAll('.lang').forEach(el => {
+                el.style.display = 'none'; // Hide all language-specific elements
+            });
+            document.querySelectorAll('.' + lang).forEach(el => {
+                el.style.display = 'block'; // Show elements for the selected language
+            });
 
-            function showLanguage(lang) {
-                if (lang === 'ru') {
-                    contentRu.classList.add('active');
-                    contentEn.classList.remove('active');
-                    btnRu.classList.add('active');
-                    btnEn.classList.remove('active');
-                    document.documentElement.lang = 'ru'; // Устанавливаем язык HTML
-                    document.title = 'Резюме - Ережепов Рамазан'; // Обновляем заголовок страницы
-                } else {
-                    contentEn.classList.add('active');
-                    contentRu.classList.remove('active');
-                    btnEn.classList.add('active');
-                    btnRu.classList.remove('active');
-                    document.documentElement.lang = 'en'; // Устанавливаем язык HTML
-                    document.title = 'Resume - Ramazan Yerezhepov'; // Обновляем заголовок страницы
-                }
+            // Adjust display for specific tags if needed (e.g., lists where block is default)
+            document.querySelectorAll('.' + lang + ' ul').forEach(ul => {
+                ul.style.display = 'block';
+            });
+            document.querySelectorAll('.' + lang + ' li').forEach(li => {
+                li.style.display = 'list-item';
+            });
+            document.querySelectorAll('.' + lang + ' p').forEach(p => {
+                p.style.display = 'block';
+            });
+            document.querySelectorAll('.' + lang + ' div.skills-grid').forEach(div => {
+                div.style.display = 'grid';
+            });
+
+
+            // Set active button
+            document.getElementById('lang-ru').classList.remove('active');
+            document.getElementById('lang-en').classList.remove('active');
+            document.getElementById('lang-' + lang).classList.add('active');
+
+            // Update HTML lang attribute for accessibility
+            document.documentElement.lang = lang;
+
+            // Update page title
+            if (lang === 'ru') {
+                document.title = 'Резюме - Ережепов Рамазан';
+            } else {
+                document.title = 'Resume - Ramazan Yerezhepov';
             }
+        }
 
-            // Устанавливаем начальный язык на русский
-            showLanguage('ru');
-
-            btnRu.addEventListener('click', function() {
-                showLanguage('ru');
-            });
-
-            btnEn.addEventListener('click', function() {
-                showLanguage('en');
-            });
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            switchLang('ru'); // Default to Russian
         });
     </script>
 </body>

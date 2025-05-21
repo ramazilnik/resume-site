@@ -1,40 +1,260 @@
+/* General Styling */
 body {
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
+    font-family: 'Open Sans', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f0f2f5;
     color: #333;
+    line-height: 1.6;
 }
 
-header {
-    background-color: #0d6efd;
-    color: white;
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Language Switcher */
+.lang-switch {
     text-align: center;
-    padding: 2rem;
+    padding: 15px 0;
+    background-color: #3f51b5; /* A pleasant blue */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
+.lang-switch button {
+    background-color: #5c6bc0; /* Slightly lighter blue */
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    margin: 0 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.95em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.lang-switch button:hover {
+    background-color: #3949ab; /* Darker on hover */
+    transform: translateY(-2px);
+}
+
+.lang-switch button.active {
+    background-color: #1a237e; /* Even darker for active */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: default;
+}
+
+/* Profile Header */
+.profile-header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #42a5f5, #2196f3); /* Gradient blue */
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-header h1 {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    font-size: 2.8em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.profile-header .role {
+    font-size: 1.3em;
+    margin-top: 5px;
+    opacity: 0.9;
+}
+
+/* Sections */
 section {
-    max-width: 800px;
-    margin: 1rem auto;
-    padding: 2rem;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 30px;
+    border-bottom: 1px solid #eee;
 }
 
+section:last-child {
+    border-bottom: none;
+}
+
+section h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8em;
+    color: #3f51b5; /* Primary blue for headings */
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+/* Lists (Contacts, Languages, Certifications, References) */
 ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-ul li::before {
-    content: "✔ ";
-    color: #0d6efd;
+ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
 }
 
+ul li i { /* For icon-like characters */
+    margin-right: 10px;
+    color: #3f51b5;
+    font-size: 1.2em;
+}
+
+/* About Me */
+.about-me p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr; /* Adjust column width ratio */
+    gap: 15px 20px;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+.skills-grid strong {
+    color: #3f51b5;
+    font-weight: 600;
+}
+
+/* Work Experience */
+.job-entry {
+    margin-bottom: 30px;
+    padding-left: 20px;
+    border-left: 4px solid #3f51b5;
+    position: relative;
+}
+
+.job-entry:last-child {
+    margin-bottom: 0;
+}
+
+.job-entry::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: #3f51b5;
+    border-radius: 50%;
+    position: absolute;
+    left: -8px;
+    top: 5px;
+}
+
+.job-entry h3 {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.job-meta {
+    font-size: 0.95em;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.job-entry ul {
+    list-style: disc; /* Use discs for job bullets */
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.job-entry ul li {
+    font-size: 1em;
+    margin-bottom: 5px;
+    line-height: 1.5;
+    display: list-item; /* Override flex for list items within job-entry */
+}
+
+.job-entry ul li::before {
+    content: none; /* Remove custom checkmark */
+}
+
+
+/* Education & Certifications */
+.edu-entry h3 {
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.edu-meta {
+    font-size: 1em;
+    color: #777;
+}
+
+/* References */
+.references ul li strong {
+    color: #333;
+}
+.references ul li span {
+    font-size: 0.95em;
+    color: #555;
+    margin-left: 5px; /* Space between bold name and title */
+}
+
+
+/* Footer */
 footer {
     text-align: center;
-    background: #333;
+    padding: 20px;
+    background-color: #333;
     color: white;
-    padding: 1rem;
+    font-size: 0.9em;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 20px; /* Space from the last section */
+}
+
+/* Language display logic - controlled by JS */
+.lang {
+    display: none;
+}
+.lang.active {
+    display: block;
+}
+.lang.active.ru, .lang.active.en {
+    display: block; /* Ensure block elements show correctly */
+}
+
+/* Adjustments for lists within sections */
+section ul {
+    display: block; /* Ensure default block display for ul */
+}
+section ul li {
+    display: list-item; /* Ensure default list-item display for li */
 }
