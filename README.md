@@ -36,7 +36,7 @@
 
 1.  **Клонируйте репозиторий:**
     ```bash
-    git clone [https://github.com/ВАШ_ПОЛЬЗОВАТЕЛЬ/resume-site.git](https://github.com/ВАШ_ПОЛЬЗОВАТЕЛЬ/resume-site.git)
+    git clone [https://github.com/ramazilnik/resume-site.git](https://github.com/ramazilnik/resume-site.git)
     cd resume-site
     ```
     (Замените `ВАШ_ПОЛЬЗОВАТЕЛЬ` на ваш никнейм на GitHub).
