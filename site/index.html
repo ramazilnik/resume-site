@@ -193,16 +193,15 @@
     </footer>
 
     <script>
-        // Function to switch language
+        // Тут меняем язык
         function switchLang(lang) {
             document.querySelectorAll('.lang').forEach(el => {
-                el.style.display = 'none'; // Hide all language-specific elements
+                el.style.display = 'none'; // Скрыть все элементы с классом lang
             });
             document.querySelectorAll('.' + lang).forEach(el => {
-                el.style.display = 'block'; // Show elements for the selected language
+                el.style.display = 'block'; // показать элементы с выбранным языком
             });
-
-            // Adjust display for specific tags if needed (e.g., lists where block is default)
+    
             document.querySelectorAll('.' + lang + ' ul').forEach(ul => {
                 ul.style.display = 'block';
             });
@@ -217,15 +216,12 @@
             });
 
 
-            // Set active button
             document.getElementById('lang-ru').classList.remove('active');
             document.getElementById('lang-en').classList.remove('active');
             document.getElementById('lang-' + lang).classList.add('active');
-
-            // Update HTML lang attribute for accessibility
+            
             document.documentElement.lang = lang;
-
-            // Update page title
+            
             if (lang === 'ru') {
                 document.title = 'Резюме - Ережепов Рамазан';
             } else {
@@ -233,7 +229,6 @@
             }
         }
 
-        // Initialize language on page load
         document.addEventListener('DOMContentLoaded', () => {
             switchLang('ru'); // Default to Russian
         });
