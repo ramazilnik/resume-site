@@ -159,9 +159,9 @@
             <h2 class="lang ru">Языки</h2>
             <h2 class="lang en">Languages</h2>
             <ul>
-                <li>Қазақ тілі — <span class="lang ru">родной</span> / <span class="lang en">native</span></li>
-                <li>Русский — <span class="lang ru">свободно</span> / <span class="lang en">fluent</span></li>
-                <li>Английский — <span class="lang ru">начальный (A1)</span> / <span class="lang en">beginner (A1)</span></li>
+                <li>Қазақ тілі — <span class="lang ru">родной</span>  <span class="lang en">native</span></li>
+                <li>Русский — <span class="lang ru">свободно</span>  <span class="lang en">fluent</span></li>
+                <li>Английский — <span class="lang ru">начальный (A1)</span>  <span class="lang en">beginner (A1)</span></li>
             </ul>
         </section>
 
@@ -180,26 +180,26 @@
             <h2 class="lang ru">Рекомендации</h2>
             <h2 class="lang en">References</h2>
             <ul>
-                <li><strong>Аслан Жаныспаев</strong>, <span class="lang ru">Аким города Житикары</span> / <span class="lang en">Akim (Mayor) of Zhetikara city</span></li>
-                <li><strong>Вячеслав Дудник</strong>, <span class="lang ru">экс-вице-министр здравоохранения</span> / <span class="lang en">Former Vice-Minister of Healthcare</span></li>
-                <li><strong>Сандыбеков Багитбек Назарбекович</strong>, <span class="lang ru">Советник председателя правления АО "СПК "Тобол"</span> / <span class="lang en">Advisor to the Chairman of the Management Board, JSC "SEC "Tobol"</span></li>
+                <li><strong>Аслан Жаныспаев</strong>, <span class="lang ru">Аким города Житикары</span>  <span class="lang en">Akim (Mayor) of Zhetikara city</span></li>
+                <li><strong>Вячеслав Дудник</strong>, <span class="lang ru">экс-вице-министр здравоохранения</span>  <span class="lang en">Former Vice-Minister of Healthcare</span></li>
+                <li><strong>Сандыбеков Багитбек Назарбекович</strong>, <span class="lang ru">Советник председателя правления АО "СПК "Тобол"</span>  <span class="lang en">Advisor to the Chairman of the Management Board, JSC "SEC "Tobol"</span></li>
             </ul>
         </section>
     </main>
 
     <footer>
-        <p class="lang ru">&copy; 2025 Ережепов Рамазан. Все права защищены.</p>
-        <p class="lang en">&copy; 2025 Ramazan Yerezhepov. All rights reserved.</p>
+        <p class="lang ru">&copy; 2025 Ережепов Рамазан. </p>
+        <p class="lang en">&copy; 2025 Ramazan Yerezhepov. </p>
     </footer>
 
     <script>
         // Тут меняем язык
         function switchLang(lang) {
             document.querySelectorAll('.lang').forEach(el => {
-                el.style.display = 'none'; // Скрыть все элементы с классом lang
+                el.style.display = 'none'; 
             });
             document.querySelectorAll('.' + lang).forEach(el => {
-                el.style.display = 'block'; // показать элементы с выбранным языком
+                el.style.display = 'block'; 
             });
     
             document.querySelectorAll('.' + lang + ' ul').forEach(ul => {
