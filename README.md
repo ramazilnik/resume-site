@@ -20,15 +20,18 @@
 ## 🏗️ Структура проекта
 ```text
 .
-├── .github/              # Конфигурации GitHub Actions
+├── .github/                    # Конфигурации GitHub Actions
 │   └── workflows/
-│       └── deploy.yml    # Workflow для автоматического деплоя
-├── site/                 # Корневая папка вашего сайта
-│   ├── img/              # Изображения для сайта (например, фото профиля)
-│   ├── index.html        # Основной HTML-файл
-│   └── styles.css        # Таблица стилей CSS
-├── Caddyfile             # Конфигурация веб-сервера Caddy
-└── docker-compose.yml    # Определение Docker-сервисов для проекта
+│       └── deploy.yml          # Workflow для автоматического деплоя
+├── site/ 
+│   ├── documents/              # Корневая папка вашего сайта  
+│   │   ├── Yerezhepov.pdf
+│   │   └── Yerezhepov_en.pdf              
+│   ├── img/                    # Изображения для сайта (например, фото профиля)
+│   ├── index.html              # Основной HTML-файл
+│   └── styles.css              # Таблица стилей CSS
+├── Caddyfile                   # Конфигурация веб-сервера Caddy
+└── docker-compose.yml          # Определение Docker-сервисов для проекта
 ```
 ## 🚀 Запуск проекта локально (Docker Compose)
 
@@ -39,7 +42,6 @@
     git clone [https://github.com/ramazilnik/resume-site.git](https://github.com/ramazilnik/resume-site.git)
     cd resume-site
     ```
-    (Замените `ВАШ_ПОЛЬЗОВАТЕЛЬ` на ваш никнейм на GitHub).
 
 2.  **Убедитесь, что Docker и Docker Compose установлены.**
 
